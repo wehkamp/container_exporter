@@ -9,7 +9,7 @@ and [DockerClient](https://github.com/fsouza/go-dockerclient) and then exposes t
 ## Run it as container
 
     docker run -p 9104:9104 -v /sys/fs/cgroup:/cgroup \
-               -v /var/run/docker.sock:/var/run/docker.sock prom/container-exporter
+               -v /var/run/docker.sock:/var/run/docker.sock wehkamp/prometheus-container-exporter
 
 ## Support for labels
 
@@ -18,7 +18,7 @@ Specify all Docker label whose values you would like to tag your Prometheus metr
     docker run --name ContainerA --label LabelA=ValueA --label LabelB=ValueB [IMAGE] 
     docker run --name ContainerB --label LabelB=ValueB --label LabelC=ValueC [IMAGE] 
     docker run -p 9104:9104 -v /sys/fs/cgroup:/cgroup \
-               -v /var/run/docker.sock:/var/run/docker.sock prom/container-exporter -labels=LabelA,LabelB,LabelC
+               -v /var/run/docker.sock:/var/run/docker.sock wehkamp/prometheus-container-exporter -labels=LabelA,LabelB,LabelC
                
 This will load to the metrics shown below. Note that an empty string is reported for any container that does not define a label that is specified to container exporter.
 

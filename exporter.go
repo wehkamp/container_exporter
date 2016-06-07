@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/docker/libcontainer/cgroups"
-	"github.com/docker/libcontainer/cgroups/fs"
+        "github.com/opencontainers/runc/libcontainer/cgroups"
+        "github.com/opencontainers/runc/libcontainer/cgroups/fs"
 	"github.com/fsouza/go-dockerclient"
 	"github.com/prometheus/client_golang/prometheus"
 )

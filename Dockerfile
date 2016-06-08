@@ -1,7 +1,7 @@
 FROM       alpine:3.4
 EXPOSE     9104
 
-LABEL container.name="wehkamp/docker-prometheus-container-exporter"
+LABEL container.name="wehkamp/prometheus-container-exporter"
 
 ENV  GOPATH /go
 ENV APPPATH $GOPATH/src/github.com/docker-infra/container-exporter

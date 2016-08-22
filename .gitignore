@@ -1,1 +1,6 @@
-container_exporter
+cadvisor
+/release
+.vscode
+
+# Go test binaries
+*.test
